@@ -1,3 +1,9 @@
+{% extends 'portfolio/base.html' %}
+{% load staticfiles %}
+{% load mathfilters %}
+{% load humanize %}
+{% block content %}
+
 <div class="row">
     <h1 style="padding-left: 15Px">Customer Portfolio</h1>
 </div>
@@ -12,7 +18,7 @@
             <th>Customer</th>
             <th>Symbol</th>
             <th>Name</th>
-            <th>Shares</th>git remote add origin https://github.com/manavjn/efsa2p2.gitgit remote add origin https://github.com/manavjn/efsa2p2.git
+            <th>Shares</th>
             <th>Initial Stock Price</th>
             <th>Initial Stock Value</th>
 
@@ -25,8 +31,8 @@
                 <td>{{ stock.symbol }}</td>
                 <td>{{ stock.name }}</td>
                 <td>{{ stock.shares }}</td>
-                <td>{{ stock.purchase_price|intcomma }}</td>
-                <td>{{ stock.initial_stock_value|intcomma}}
+                <td>{{ stock.purchase_price }}</td>
+                <td>{{ stock.initial_stock_value}}
 
             </tr>
         {% endfor %}
